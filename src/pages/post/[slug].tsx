@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 
-import { Container, Title, Wrapper } from '../blog/styles';
-import { PostContainer } from './styles';
+import {
+  Container,
+  Title,
+  Wrapper,
+  PostContainer,
+} from '../../components/styles';
 import { useRouter } from 'next/router';
 import Menu from '../../components/Menu/index';
 

@@ -2,6 +2,62 @@ import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+  height: 100vh;
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+`;
+export const Title = styled.h1`
+  color: #222222;
+  font-size: 72px;
+  text-align: center;
+  font-weight: bold;
+  @media screen and (max-width: 720px) {
+    font-size: 48px;
+  }
+`;
+export const PostContainer = styled.div`
+  padding: 8px;
+  max-width: 1200px;
+  width: 100%;
+  h1 {
+    font-weight: bold;
+    font-size: 36px;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  p {
+    margin: 0;
+  }
+  blockquote {
+    border-left: 1px solid #222222;
+    margin: 0;
+    padding: 12px 40px;
+    background-color: #f7f7f7;
+    border-radius: 0 0 4px;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4a4a4a;
+  }
+  code {
+    padding: 12px;
+    color: white;
+    background-color: #000921;
+    border-radius: 4px;
+    display: block;
+    margin: 12px 0;
+  }
+`;
+export const ContainerHome = styled.div`
+  display: flex;
   flex-direction: column;
   height: 100vh;
 `;
@@ -23,7 +79,7 @@ const FadeInAnimationMenu = keyframes`
         opacity: 1;
         }
 `;
-export const Title = styled.h1`
+export const TitleHome = styled.h1`
   font-size: 72px;
   text-align: center;
   color: #222222;
@@ -74,7 +130,7 @@ export const TitleContainer = styled.div`
   margin: auto;
 `;
 
-export const Wrapper = styled.div`
+export const WrapperHome = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

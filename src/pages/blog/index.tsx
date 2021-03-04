@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Title, Wrapper } from './styles';
+import { Container, Title, Wrapper } from '../../components/styles';
 import Menu from '../../components/Menu';
 import CardBlog from '../../components/CardBlog';
 

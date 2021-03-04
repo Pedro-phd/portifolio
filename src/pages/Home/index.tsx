@@ -1,19 +1,27 @@
 import React from 'react';
 
-import { Container,Title,TitleBold,MenuItem,MenuContainer,TitleContainer,Wrapper } from './styles';
-import Menu from '../../components/Menu'
-
+import {
+  ContainerHome,
+  TitleHome,
+  TitleBold,
+  MenuItem,
+  MenuContainer,
+  TitleContainer,
+  WrapperHome,
+} from '../../components/styles';
+import Menu from '../../components/Menu';
 
 const Home: React.FC = () => {
   return (
-    <Container>
-      <Wrapper>
-        <Menu/>
+    <ContainerHome>
+      <WrapperHome>
+        <Menu />
         <TitleContainer>
-          <Title>Pedro</Title><TitleBold>Dominici</TitleBold>
+          <TitleHome>Pedro</TitleHome>
+          <TitleBold>Dominici</TitleBold>
         </TitleContainer>
-      </Wrapper>
-    </Container>
+      </WrapperHome>
+    </ContainerHome>
   );
 };
 

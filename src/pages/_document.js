@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import Document from 'next/document';
 import { ServerStyleSheets as MaterialUiServerStyleSheets } from '@material-ui/styles';

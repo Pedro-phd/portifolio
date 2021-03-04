@@ -7,7 +7,7 @@ import CardBlog from '../../components/CardBlog';
 import { GET_POST } from '../../graphql/queries';
 import client from '../../graphql/client';
 
-const Blog: React.FC = ({ data }) => {
+const Blog: React.FC<any> = ({ data }) => {
   console.log(data);
   return (
     <Container>

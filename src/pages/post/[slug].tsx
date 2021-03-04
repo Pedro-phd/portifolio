@@ -34,7 +34,7 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-const Post: React.FC = ({ data }) => {
+const Post: React.FC<any> = ({ data }) => {
   const router = useRouter();
   console.log(data);
 

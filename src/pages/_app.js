@@ -9,7 +9,7 @@ import GlobalStyle from '../style/GlobalStyle';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import theme from '../themes/light';
+import theme from '../themes/dark';
 
 export default class MyApp extends App {
   componentDidMount() {
@@ -36,6 +36,10 @@ export default class MyApp extends App {
             rel="preload"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
             as="font"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Megrim&display=swap"
+            rel="stylesheet"
           />
         </Head>
         <StyledComponentProvider theme={theme}>

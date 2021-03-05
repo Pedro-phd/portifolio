@@ -1,24 +1,24 @@
 import React from 'react';
 
+import Header from '../../components/Header';
+
 import {
   ContainerHome,
   TitleHome,
-  TitleBold,
   MenuItem,
   MenuContainer,
   TitleContainer,
   WrapperHome,
 } from '../../components/styles';
-import Menu from '../../components/Menu';
 
 const Home: React.FC = () => {
   return (
     <ContainerHome>
       <WrapperHome>
-        <Menu />
+        <Header />
         <TitleContainer>
-          <TitleHome>Pedro</TitleHome>
-          <TitleBold>Dominici</TitleBold>
+          <TitleHome>PEDRO</TitleHome>
+          <TitleHome className="second">DOMINICI</TitleHome>
         </TitleContainer>
       </WrapperHome>
     </ContainerHome>

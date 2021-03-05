@@ -8,7 +8,6 @@ import { GET_POST } from '../../graphql/queries';
 import client from '../../graphql/client';
 
 const Blog: React.FC<any> = ({ data }) => {
-  console.log(data);
   return (
     <Container>
       <Wrapper>
@@ -30,13 +29,12 @@ const Blog: React.FC<any> = ({ data }) => {
 
 export default Blog;
 
-export const getStaticProps = async () => {
+export async function getServerSideProps(context) {
   const data = await client.request(GET_POST);
 
   return {
     props: {
       data,
-    },
-    revalidate: 60 * 60 * 24, // update once per day
+    }, // will be passed to the page component as props
   };
-};
+}

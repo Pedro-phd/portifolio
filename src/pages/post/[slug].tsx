@@ -13,17 +13,31 @@ import Header from '../../components/Header/index';
 import { GET_POST_BY_SLUG, GET_POST } from '../../graphql/queries';
 import client from '../../graphql/client';
 
-export async function getStaticPaths() {
-  const { blogs } = await client.request(GET_POST);
+// export async function getStaticPaths() {
+//   const { blogs } = await client.request(GET_POST);
 
-  const paths = blogs.map(({ slug }) => ({
-    params: { slug },
-  }));
+//   const paths = blogs.map(({ slug }) => ({
+//     params: { slug },
+//   }));
 
-  return { paths, fallback: true };
-}
+//   return { paths, fallback: true };
+// }
 
-export const getStaticProps = async ({ params }) => {
+// export const getStaticProps = async ({ params }) => {
+//   const data = await client.request(GET_POST_BY_SLUG, {
+//     slug: `${params?.slug}`,
+//   });
+
+//   if (!data) return { notFound: true };
+
+//   return {
+//     revalidate: 60, // once per day
+//     props: {
+//       data,
+//     },
+//   };
+// };
+export async function getServerSideProps({ params }) {
   const data = await client.request(GET_POST_BY_SLUG, {
     slug: `${params?.slug}`,
   });
@@ -31,12 +45,11 @@ export const getStaticProps = async ({ params }) => {
   if (!data) return { notFound: true };
 
   return {
-    revalidate: 60, // once per day
     props: {
       data,
-    },
+    }, // will be passed to the page component as props
   };
-};
+}
 
 const Post: React.FC<any> = ({ data }) => {
   const router = useRouter();

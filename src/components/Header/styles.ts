@@ -12,9 +12,6 @@ export const Title = styled.h1`
   color: #ef2d56;
   margin: 0;
   font-weight: 700;
-  @media screen and (max-width: 720px) {
-    display: none;
-  }
 `;
 export const Menu = styled.a`
   color: white;

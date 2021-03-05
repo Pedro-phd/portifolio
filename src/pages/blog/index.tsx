@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Container, Title, Wrapper } from '../../components/styles';
-import Menu from '../../components/Menu';
 import CardBlog from '../../components/CardBlog';
+import Header from '../../components/Header';
 
 import { GET_POST } from '../../graphql/queries';
 import client from '../../graphql/client';
@@ -12,7 +12,7 @@ const Blog: React.FC<any> = ({ data }) => {
   return (
     <Container>
       <Wrapper>
-        <Menu />
+        <Header />
         <Title>Blog</Title>
         {data.blogs.map((post) => {
           return (

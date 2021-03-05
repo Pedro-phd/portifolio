@@ -8,7 +8,7 @@ import {
   PostContainer,
 } from '../../components/styles';
 import { useRouter } from 'next/router';
-import Menu from '../../components/Menu/index';
+import Header from '../../components/Header/index';
 
 import { GET_POST_BY_SLUG, GET_POST } from '../../graphql/queries';
 import client from '../../graphql/client';
@@ -46,7 +46,7 @@ const Post: React.FC<any> = ({ data }) => {
   return (
     <Container>
       <Wrapper>
-        <Menu />
+        <Header />
         <Title>{data.blog.title}</Title>
         <PostContainer>
           {ReactHtmlParser(data.blog.articleContent.html)}

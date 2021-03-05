@@ -37,6 +37,10 @@ export default class MyApp extends App {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
             as="font"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Megrim&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <StyledComponentProvider theme={theme}>
           <MaterialUiProvider theme={theme}>

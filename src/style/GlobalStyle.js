@@ -3,10 +3,15 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle `
     *{
-        @import url(//db.onlinewebfonts.com/c/05093c1553c8ca12edeb59994bedc772?family=Product+Sans);
-        font-family: Product Sans, sans-serif !important;
-        font-weight:500;
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+        font-family: 'PT Sans', sans-serif;
+        font-weight:400;
     }
-
+    body{
+        background: rgb(0,0,0);
+        background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(13,13,13,1) 100%);
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+    }
 `;
 export default GlobalStyle

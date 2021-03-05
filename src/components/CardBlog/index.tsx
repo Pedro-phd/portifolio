@@ -11,7 +11,7 @@ interface ICardBlog {
 const CardBlog: React.FC<ICardBlog> = ({ title, description, slug }) => {
   return (
     <Container>
-      <Title>{title}</Title>
+      <Title href={`/post/${slug}`}>{title}</Title>
       <Description>
         {description}
         <SeeMore href={`/post/${slug}`}>Ver Mais ...</SeeMore>

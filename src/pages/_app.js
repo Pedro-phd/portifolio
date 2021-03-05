@@ -9,7 +9,7 @@ import GlobalStyle from '../style/GlobalStyle';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import theme from '../themes/light';
+import theme from '../themes/dark';
 
 export default class MyApp extends App {
   componentDidMount() {
